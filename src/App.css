@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: lightsalmon;
+  /* background-image: url("https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg"); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
