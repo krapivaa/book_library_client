@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, Button} from 'reactstrap';
+import '../App.css';
 
 
 const Navigation = (props) => {
@@ -12,13 +13,14 @@ const [isOpen, setIsOpen] = useState(false);
     }
     
         return (
-            <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/">My library</NavbarBrand>
+            <Navbar color="faded" light expand="md" className="navbar" >
+                <NavbarBrand href="/" className="mr-auto navbarBrand" style={{color: 'red'}}  >My Book library</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <Button onClick={props.clickLogout}>Logout</Button>
+                            {props.token ?  
+                            <Button onClick={props.clickLogout}>Logout</Button> : null} 
                         </NavItem>
                     </Nav>
                 </Collapse>

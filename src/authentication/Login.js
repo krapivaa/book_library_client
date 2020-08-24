@@ -4,7 +4,7 @@ import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+ 
     const handleSubmit = (event) => {
         event.preventDefault();
         fetch('http://localhost:3007/api/user/login', {
@@ -22,7 +22,7 @@ const Login = (props) => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Sign In</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="email">Email</Label>

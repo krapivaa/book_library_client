@@ -5,17 +5,19 @@ import Login from './Login';
 
 const Start = (props) => {
     return ( 
-        <Container className="auth-container">
+        <Container className="start-container">
             <Row>
-                <Col md="6">
+                <Col md="4">
                    <Signup updateToken={props.updateToken} />
                 </Col>
-                <Col md="6" className="login-col">
+                <Col md="4" className="login-col">
                     <Login updateToken={props.updateToken} />
                 </Col>
             </Row>
+         
         </Container>
      );
 }
  
 export default Start;
+

@@ -34,24 +34,31 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+
+      {/* <header className="App-header">
         
         <p>
          Hello Book Lover!
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg"
           target="_blank"
           rel="noopener noreferrer"
         >
           Read!
-        </a>
-        <div>
+        </a> */}
+        {/* <div>
           <Navigation clickLogout={clearToken} />
           {protectedViews()}
         </div>
-      </header>
+      // </header> */} 
+       
+        <div>
+          <Navigation clickLogout={clearToken} token={sessionToken} />
+          {protectedViews()}
+        </div>
+
     </div>
   );
 }
