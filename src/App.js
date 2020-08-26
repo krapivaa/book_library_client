@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
+// import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
-import Navigation from './home/Navbar';
+import Navigation from './home/Navigation';
 import Start from './authentication/Start';
 import LibraryHome from './booklibrary/LibraryHome'
+import SecondPage from './home/SecondPage';
 
 
 
@@ -56,7 +58,10 @@ function App() {
        
         <div>
           <Navigation clickLogout={clearToken} token={sessionToken} />
+          {/* <Router> */}
           {protectedViews()}
+          <SecondPage />
+          {/* </Router> */}
         </div>
 
     </div>

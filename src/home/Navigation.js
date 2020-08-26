@@ -14,7 +14,7 @@ const [isOpen, setIsOpen] = useState(false);
     
         return (
             <Navbar color="faded" light expand="md" className="navbar" >
-                <NavbarBrand href="/" className="mr-auto navbarBrand" style={{color: 'red'}}  >My Book library</NavbarBrand>
+                <NavbarBrand href="/" className="mr-auto navbarBrand" style={{color: 'dark-green'}}  ><h2>My Book library</h2></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>

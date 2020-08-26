@@ -81,7 +81,10 @@ const LibraryCreate = (props) => {
                 <Input name="photo" value={photo} onChange={(e) => setPhoto(e.target.value)}></Input>
             </FormGroup>
             <Button type="submit">Submit</Button>
+            
         </Form>
+        <br/>
+           <Button type="cancel">Cancel</Button>
         </>
      );
 }

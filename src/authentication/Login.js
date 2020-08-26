@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import '../App.css';
+
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -22,8 +24,8 @@ const Login = (props) => {
 
     return (
         <div>
-            <h1>Sign In</h1>
-            <Form onSubmit={handleSubmit}>
+            <h3>Login</h3>
+            <Form onSubmit={handleSubmit} className="formLogin">
                 <FormGroup>
                     <Label htmlFor="email">Email</Label>
                     <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} />

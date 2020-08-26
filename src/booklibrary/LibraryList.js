@@ -18,7 +18,8 @@ const LibraryList = (props) => {
   const bookMapper = () => {
     return props.library.map((book, index) => {
         return(
-            <tr key={index}>
+          
+            <tr key={index} style={{backgroundColor: 'white'}}>
                 {/* <th scope="row">{book.id}</th> */}
                 <td>{book.date}</td>
                 <td>{book.author}</td>
@@ -33,6 +34,7 @@ const LibraryList = (props) => {
                     <Button color="danger" onClick={() => {deleteBook(book)}}>Delete</Button>
                 </td>
             </tr>
+            
         )
     })
 }

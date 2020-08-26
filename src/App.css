@@ -1,12 +1,14 @@
 .App {
   text-align: center;
- 
-  
+  background-color: indigo;
+  background-image: url("../src/assets/bookCover.jpg");
+  height: 100vh;
 }
 
 .App-header {
   /* background-color: lightsalmon; */
-  /* background-image: url("https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg"); */
+  /*  */
+  background-image: url("https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,10 +31,22 @@
   }
 }
 
+/* Navbar.js */
 .navbar {
-  background-color: grey;
+  background-color: olivedrab;
+  padding: 10px;
 }
-
 .navbarBrand {
   padding: 0.25em;
+}
+
+/* Login.js */
+.formLogin {
+  background-color: olivedrab;
+  margin: 20px;
+  padding: 20px;
+}
+
+.start-container {
+  
 }
