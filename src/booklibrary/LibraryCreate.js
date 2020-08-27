@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import APIURL from '../helpers/environment'
 
 const LibraryCreate = (props) => {
 
@@ -13,7 +14,7 @@ const LibraryCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3007/api/booklist/create', {
+        fetch(`${APIURL}/api/booklist/create`, {
             method: 'POST',
             body: JSON.stringify({books: {title: title, author: author, date: date, notes: notes, haveRead: haveRead, willRead: willRead, photo: photo}}),
             headers: new Headers({

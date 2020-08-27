@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import APIURL from '../helpers/environment'
 
 const LibraryUpdate = (props) => {
 const [updateDate, setUpdateDate] = useState(props.bookToUpdate.date);
@@ -12,7 +13,7 @@ const [updatePhoto, setUpdatePhoto] = useState(props.bookToUpdate.photo);
 
 const bookUpdate = (event, book) => {
     event.preventDefault();
-    fetch(`http://localhost:3007/api/booklist/update/${props.bookToUpdate.id}`, {
+    fetch(`${APIURL}/api/booklist/update/${props.bookToUpdate.id}`, {
         method: 'PUT',
         body: JSON.stringify({books: {date: updateDate, author: updateAuthor, title: updateTitle, notes: updateNotes, haveRead: updateHaveRead, willRead: updateWillRead, photo: updatePhoto}}),
         headers: new Headers({

@@ -1,11 +1,12 @@
 import React from 'react';
 import {Table, Button} from 'reactstrap';
 import '../App.css'
+import APIURL from '../helpers/environment';
 
 const LibraryList = (props) => {
 
   const deleteBook = (book) => {
-    fetch(`http://localhost:3007/api/booklist/delete/${book.id}`, {
+    fetch(`${APIURL}/api/booklist/delete/${book.id}`, {
         method: 'DELETE',
         headers: new Headers({
             'Content-Type': 'application/json',

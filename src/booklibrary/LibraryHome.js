@@ -5,6 +5,7 @@ import LibraryList from './LibraryList';
 import LibraryUpdate from './LibraryUpdate';
 import classnames from 'classnames';
 import '../App.css';
+import APIURL from '../helpers/environment'
 
 
 const LibraryHome = (props) => {
@@ -12,7 +13,7 @@ const LibraryHome = (props) => {
 const [library, setLibrary] = useState([]);
 const [updateActive, setUpdateActive] = useState(false);
 const [bookToUpdate, setBookToUpdate] = useState({});
-const [fetchUrl, setFetchUrl] = useState("http://localhost:3007/api/booklist/haveRead");
+const [fetchUrl, setFetchUrl] = useState(`${APIURL}/api/booklist/haveRead`);
 
 const [activeTab, setActiveTab] = useState('1');
 const toggle = tab => {
@@ -86,13 +87,13 @@ useEffect(() => {
 
                     <Col md='3'>
                 <Button color="success" className="buttonMyBookLibrary" onClick={() => {
-                 setFetchUrl("http://localhost:3007/api/booklist/mine")}}>My Book Library</Button>
+                 setFetchUrl(`${APIURL}/api/booklist/mine`)}}>My Book Library</Button>
 
                  <br/>
                  <br/>
 
                 <Button color="success" className="buttonHaveRead" onClick={() => {
-                 setFetchUrl("http://localhost:3007/api/booklist/haveRead")}}>The books I have read</Button>
+                 setFetchUrl(`${APIURL}/api/booklist/haveRead`)}}>The books I have read</Button>
 
                 </Col>
                 </Row>

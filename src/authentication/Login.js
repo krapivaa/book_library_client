@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import '../App.css';
+import APIURL from '../helpers/environment';
 
 
 const Login = (props) => {
@@ -9,7 +10,7 @@ const Login = (props) => {
  
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3007/api/user/login', {
+        fetch(`${APIURL}/api/user/login`, {
             method: 'POST',
             body: JSON.stringify({user: {email: email, password: password} }),
             headers: new Headers({
