@@ -1,5 +1,6 @@
 import React from 'react';
 import {Table, Button} from 'reactstrap';
+import '../App.css'
 
 const LibraryList = (props) => {
 
@@ -27,11 +28,11 @@ const LibraryList = (props) => {
                 <td>{book.notes}</td>
                 <td>{book.haveRead ? "Yes" : "No"}</td>
                 <td>{book.willRead ? "Yes" : "No"}</td>
-                <td>{book.photo}</td>
+                {/* <td> <img src="{book.photo}" /></td> */}
                 <td>
-                  <Button color="warning" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update</Button>
+                  <Button outline color="info" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
 
-                    <Button color="danger" onClick={() => {deleteBook(book)}}>Delete</Button>
+                    <Button outline color="secondary " className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
                 </td>
             </tr>
             
@@ -42,7 +43,7 @@ const LibraryList = (props) => {
 
     return ( 
         <div>
-            <h3>Library</h3>
+            {/* <h3>Library</h3> */}
             <Table hover bordered>
       <thead>
         <tr>

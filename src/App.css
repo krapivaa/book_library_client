@@ -1,8 +1,10 @@
 .App {
   text-align: center;
-  background-color: indigo;
+ 
   background-image: url("../src/assets/bookCover.jpg");
   height: 100vh;
+  background-size: cover;
+
 }
 
 .App-header {
@@ -47,6 +49,36 @@
   padding: 20px;
 }
 
-.start-container {
+/* .start-container {
+  
+} */
+
+/* LibraryHome.js */
+.containerLibraryHome {
+  background-color: rgb(243, 240, 236);
+}
+
+
+/* LibraryList.js */
+.buttonUpdate {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50px;
+  /* background-color: papayawhip; */
+}
+
+.buttonDelete {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50px;
+ 
+}
+
+/* Footer.js */
+.footer {
+  padding: 10px;
+  padding-left: 50px ;
+  margin: 0px;
+  background-color: seashell;
   
 }

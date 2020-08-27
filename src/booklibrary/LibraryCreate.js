@@ -30,7 +30,8 @@ const LibraryCreate = (props) => {
             setHaveRead(true);
             setWillRead(false);
             setPhoto('')
-            props.fetchLibrary();
+            props.fetchLibrary()
+            props.toggle('1');
         })
     }
 
@@ -84,7 +85,7 @@ const LibraryCreate = (props) => {
             
         </Form>
         <br/>
-           <Button type="cancel">Cancel</Button>
+           <Button type="cancel" onClick={ () => props.toggle('1')}>Cancel</Button>
         </>
      );
 }

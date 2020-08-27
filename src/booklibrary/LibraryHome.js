@@ -4,7 +4,7 @@ import LibraryCreate from './LibraryCreate';
 import LibraryList from './LibraryList';
 import LibraryUpdate from './LibraryUpdate';
 import classnames from 'classnames';
-
+import '../App.css';
 
 
 const LibraryHome = (props) => {
@@ -20,7 +20,7 @@ const toggle = tab => {
   }
 
 useEffect(() => {
-    fetchLibrary ()
+    fetchLibrary () 
 }, [fetchUrl]);
 
 const fetchLibrary = () => {
@@ -33,7 +33,7 @@ const fetchLibrary = () => {
     }).then( (res) => res.json())
     .then((logBook) => {
         setLibrary(logBook)
-        //console.log(logBook);
+        
     })
 }
 
@@ -81,13 +81,17 @@ useEffect(() => {
                 <Col md='9'>
                     <LibraryList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchLibrary={fetchLibrary} token={props.token} />
 
-                <Button color="success" onClick={() => {
+                    </Col>
+
+
+                    <Col md='3'>
+                <Button color="success" className="buttonMyBookLibrary" onClick={() => {
                  setFetchUrl("http://localhost:3007/api/booklist/mine")}}>My Book Library</Button>
 
                  <br/>
                  <br/>
 
-                <Button color="success" onClick={() => {
+                <Button color="success" className="buttonHaveRead" onClick={() => {
                  setFetchUrl("http://localhost:3007/api/booklist/haveRead")}}>The books I have read</Button>
 
                 </Col>
@@ -100,7 +104,7 @@ useEffect(() => {
                 <CardTitle></CardTitle>
                 <CardText> 
                      <Col md='10'>
-                    <LibraryCreate fetchLibrary={fetchLibrary} token={props.token} />
+                    <LibraryCreate fetchLibrary={fetchLibrary} token={props.token} toggle={toggle} />
                    </Col>
                 </CardText>
               </Card>

@@ -4,7 +4,11 @@ import './App.css';
 import Navigation from './home/Navigation';
 import Start from './authentication/Start';
 import LibraryHome from './booklibrary/LibraryHome'
-import SecondPage from './home/SecondPage';
+import Footer from './home/Footer';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
+
 
 
 
@@ -35,7 +39,7 @@ function App() {
    
 
   return (
-    <div className="App">
+    <>
 
       {/* <header className="App-header">
         
@@ -55,16 +59,17 @@ function App() {
           {protectedViews()}
         </div>
       // </header> */} 
-       
-        <div>
+       <Router>
+        <div className="App">
           <Navigation clickLogout={clearToken} token={sessionToken} />
-          {/* <Router> */}
           {protectedViews()}
-          <SecondPage />
-          {/* </Router> */}
-        </div>
+          </div>
+        </Router>
+        
+        <Footer />
+     
 
-    </div>
+      </>
   );
 }
 
