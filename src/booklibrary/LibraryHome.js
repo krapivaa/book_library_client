@@ -103,7 +103,7 @@ useEffect(() => {
                 </Row>
 
                 <Row>
-                <Col md='13'>
+                <Col md='12'>
                     <LibraryList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchLibrary={fetchLibrary} token={props.token} />
 
                     </Col>
