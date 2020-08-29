@@ -1,7 +1,9 @@
 import React from 'react';
-import {Table, Button} from 'reactstrap';
+import { Button} from 'reactstrap';
 import '../App.css'
 import APIURL from '../helpers/environment';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 const LibraryList = (props) => {
 
@@ -21,23 +23,23 @@ const LibraryList = (props) => {
     return props.library.map((book, index) => {
         return(
          
-            <tr key={index}>
+            <Tr key={index}>
                 {/* <th scope="row">{book.id}</th> */}
                 {/* {console.log(book.photo)} */}
-                <td>{book.date}</td>
-                <td>{book.author}</td>
-                <td>{book.title}</td>
-                <td>{book.notes}</td>
-                <td>{book.haveRead ? "Yes" : "No"}</td>
-                <td>{book.willRead ? "Yes" : "No"}</td>
-                <td><img src={book.photo} width="70" object-fit="cover" /></td>
+                <Td>{book.date}</Td>
+                <Td>{book.author}</Td>
+                <Td>{book.title}</Td>
+                <Td>{book.notes}</Td>
+                <Td>{book.haveRead ? "Yes" : "No"}</Td>
+                <Td>{book.willRead ? "Yes" : "No"}</Td>
+                <Td><img src={book.photo} width="70" object-fit="cover" /></Td>
                 
-                <td>
+                <Td>
                   <Button outline color="success" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
 
                     <Button outline color="secondary " className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
-                </td>
-                </tr>
+                </Td>
+                </Tr>
            
             
             
@@ -50,21 +52,21 @@ const LibraryList = (props) => {
         <div>
             {/* <h3>Library</h3> */}
             <Table hover responsive style={{backgroundColor: 'white', opacity: '0.9', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
-      <thead>
-        <tr >
+      <Thead>
+        <Tr >
           {/* <th>#</th> */}
-          <th>Date</th>
-          <th>Author</th>
-          <th>Title</th>
-          <th>Notes</th>
-          <th>Have Read</th>
-          <th>Will Read</th>
-          <th>Photo</th>
-        </tr>
-      </thead>
-      <tbody>
+          <Th>Date</Th>
+          <Th>Author</Th>
+          <Th>Title</Th>
+          <Th>Notes</Th>
+          <Th>Have Read</Th>
+          <Th>Will Read</Th>
+          <Th>Photo</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
         {bookMapper()}
-      </tbody>
+      </Tbody>
     </Table>
         </div>
      );
