@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import APIURL from '../helpers/environment'
+import APIURL from '../helpers/environment';
+import '../App.css'
 
 const LibraryCreate = (props) => {
 
@@ -44,7 +45,7 @@ const LibraryCreate = (props) => {
 
         <FormGroup>
                 <Label for="date">Date</Label>
-                <Input name="date" value={date} onChange={(e) => setDate(e.target.value)}></Input>
+                <Input name="date" type="date" value={date} onChange={(e) => setDate(e.target.value)}></Input>
             </FormGroup>
 
             <FormGroup>
@@ -82,11 +83,13 @@ const LibraryCreate = (props) => {
                 <Label for="photo">Photo</Label>
                 <Input name="photo" value={photo} onChange={(e) => setPhoto(e.target.value)}></Input>
             </FormGroup>
-            <Button type="submit">Submit</Button>
+
+            <Button type="submit" className="buttonSubmitCreate" >Submit</Button>
+
+            <Button outline color="secondary" type="cancel" className="buttonCancelUpdate"onClick={ () => props.toggle('1')}>Cancel</Button>
             
         </Form>
-        <br/>
-           <Button type="cancel" onClick={ () => props.toggle('1')}>Cancel</Button>
+    
         </>
      );
 }

@@ -74,11 +74,19 @@
  
 }
 
+/* LibraryUpdate.js */
+.buttonCancelUpdate {
+  float: right;
+}
+
+.buttonSubmitCreate {
+  float: left;
+}
+
 /* Footer.js */
 .footer {
   padding: 10px;
   padding-left: 50px ;
   margin: 0px;
   background-color: seashell;
-  
 }

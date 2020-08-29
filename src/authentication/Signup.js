@@ -42,7 +42,7 @@ const handleSubmit = (event) => {
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e) => setPassword(e.target.value)} name="password" minLength="5" value={password} />
+                    <Input onChange={(e) => setPassword(e.target.value)} name="password" type="password" minLength="5" value={password} />
                 </FormGroup>
                 <Button type="submit">Signup</Button>
             </Form>

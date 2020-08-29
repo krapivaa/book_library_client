@@ -62,30 +62,53 @@ useEffect(() => {
         <NavItem>
           <NavLink
             className={classnames({ active: activeTab === '1' })}
-            onClick={() => { toggle('1'); }}
+            onClick={() => { toggle('1'); }} style={{color: 'olive'}}
           >
-            My library
+            <h4>My library</h4>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink
             className={classnames({ active: activeTab === '2' })}
-            onClick={() => { toggle('2'); }}
+            onClick={() => { toggle('2'); }} style={{color: 'olive'}}
           >
-            Create book entry
+            <h4>Create book entry</h4>
+            
           </NavLink>
         </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
         <Row>
+
+          <Col md='10' style={{color: 'black', padding: '20px', margin: '10px'}}>
+            <h4>“We lose ourselves in books. We find ourselves there too.”</h4>
+          </Col>
+
+        <Col md='3'>
+                <Button color="success"  className="buttonAllBooks" onClick={() => {
+                 setFetchUrl(`${APIURL}/api/booklist/mine`)}}>All books</Button>
+
+                 </Col>
+
+                 <br/>
+                 <br/>
+                 <Col>
+
+                <Button color="success" className="buttonHaveRead" onClick={() => {
+                 setFetchUrl(`${APIURL}/api/booklist/haveRead`)}}>The books I have read</Button>
+
+                </Col>
+
+                </Row>
+<Row>
                 <Col md='9'>
                     <LibraryList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchLibrary={fetchLibrary} token={props.token} />
 
                     </Col>
 
 
-                    <Col md='3'>
+                    {/* <Col md='3'>
                 <Button color="success" className="buttonMyBookLibrary" onClick={() => {
                  setFetchUrl(`${APIURL}/api/booklist/mine`)}}>My Book Library</Button>
 
@@ -95,7 +118,7 @@ useEffect(() => {
                 <Button color="success" className="buttonHaveRead" onClick={() => {
                  setFetchUrl(`${APIURL}/api/booklist/haveRead`)}}>The books I have read</Button>
 
-                </Col>
+                </Col> */}
                 </Row>
         </TabPane>
         <TabPane tabId="2">
@@ -104,7 +127,7 @@ useEffect(() => {
               <Card body>
                 <CardTitle></CardTitle>
                 <CardText> 
-                     <Col md='10'>
+                     <Col md='12'>
                     <LibraryCreate fetchLibrary={fetchLibrary} token={props.token} toggle={toggle} />
                    </Col>
                 </CardText>

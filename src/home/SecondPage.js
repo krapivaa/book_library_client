@@ -2,7 +2,7 @@
 // import LibraryHome from '../booklibrary/LibraryHome';
 // import Start from '../authentication/Start';
 // import Navigation from './Navigation'
-
+////import Book from '../assets/book.jpg'//
 
 // const SecondPage = () => {
 //     const [sessionToken, setSessionToken] = useState('');

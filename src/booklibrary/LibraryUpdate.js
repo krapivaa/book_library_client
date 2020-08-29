@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap';
-import APIURL from '../helpers/environment'
+import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import APIURL from '../helpers/environment';
+import '../App.css'
+
 
 const LibraryUpdate = (props) => {
 const [updateDate, setUpdateDate] = useState(props.bookToUpdate.date);
@@ -28,15 +30,17 @@ const bookUpdate = (event, book) => {
 const [modal, setModal] = useState(false);
 const toggle = () => setModal(!modal);
 
+
     return ( 
         <div>
             <Modal isOpen={true}>
+
             <ModalHeader>Update</ModalHeader>
             <ModalBody>
                 <Form onSubmit={bookUpdate}>
                     <FormGroup>
                         <Label for="date">Edit Date:</Label>
-                        <Input name="date" value={updateDate} onChange={(e) =>setUpdateDate(e.target.value)}/>
+                        <Input name="date" type="date" value={updateDate} onChange={(e) =>setUpdateDate(e.target.value)}/>
                     </FormGroup>
 
                     <FormGroup>
@@ -75,10 +79,14 @@ const toggle = () => setModal(!modal);
                         <Input name="photo" value={updatePhoto} onChange={(e) =>setUpdatePhoto(e.target.value)}/>
                     </FormGroup>
 
-                    <Button type="submit">Update</Button>
-                
+                    <Button type="submit">Update</Button> 
+                 
+                    <Button outline color="secondary" className="buttonCancelUpdate">Cancel</Button>
                 </Form>
             </ModalBody>
+
+           
+
         </Modal>
         </div>
      );

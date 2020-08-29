@@ -29,7 +29,7 @@ const LibraryList = (props) => {
                 <td>{book.notes}</td>
                 <td>{book.haveRead ? "Yes" : "No"}</td>
                 <td>{book.willRead ? "Yes" : "No"}</td>
-                {/* <td> <img src="{book.photo}" /></td> */}
+                <td> <img src="{book.photo}" /></td>
                 <td>
                   <Button outline color="info" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
 
