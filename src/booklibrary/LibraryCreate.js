@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import APIURL from '../helpers/environment';
 import '../App.css'
@@ -39,7 +39,7 @@ const LibraryCreate = (props) => {
 
     return ( 
        
-        <>
+        <Fragment>
         <h3>Update your Library</h3>
         <Form onSubmit={handleSubmit}>
 
@@ -90,7 +90,7 @@ const LibraryCreate = (props) => {
             
         </Form>
     
-        </>
+        </Fragment>
      );
 }
  

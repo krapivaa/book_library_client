@@ -23,7 +23,7 @@ const LibraryList = (props) => {
          
             <tr key={index}>
                 {/* <th scope="row">{book.id}</th> */}
-                {console.log(book.photo)}
+                {/* {console.log(book.photo)} */}
                 <td>{book.date}</td>
                 <td>{book.author}</td>
                 <td>{book.title}</td>
@@ -49,7 +49,7 @@ const LibraryList = (props) => {
     return ( 
         <div>
             {/* <h3>Library</h3> */}
-            <Table hover responsive style={{backgroundColor: 'white', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
+            <Table hover responsive style={{backgroundColor: 'white', opacity: '0.9', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
       <thead>
         <tr >
           {/* <th>#</th> */}

@@ -61,9 +61,6 @@ body, html {
   padding: 20px;
 }
 
-/* .start-container {
-  
-} */
 
 /* LibraryHome.js */
 .containerLibraryHome {
@@ -107,7 +104,7 @@ body, html {
   padding: 10px;
   padding-left: 50px ;
   margin: 0px;
-  background-color: seashell;
+  background-color: seashell; 
 }
 
 
