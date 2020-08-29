@@ -20,22 +20,26 @@ const LibraryList = (props) => {
   const bookMapper = () => {
     return props.library.map((book, index) => {
         return(
-          
-            <tr key={index} style={{backgroundColor: 'white'}}>
+         
+            <tr key={index}>
                 {/* <th scope="row">{book.id}</th> */}
+                {console.log(book.photo)}
                 <td>{book.date}</td>
                 <td>{book.author}</td>
                 <td>{book.title}</td>
                 <td>{book.notes}</td>
                 <td>{book.haveRead ? "Yes" : "No"}</td>
                 <td>{book.willRead ? "Yes" : "No"}</td>
-                <td> <img src="{book.photo}" /></td>
+                <td><img src={book.photo} width="70" object-fit="cover" /></td>
+                
                 <td>
-                  <Button outline color="info" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
+                  <Button outline color="success" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
 
                     <Button outline color="secondary " className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
                 </td>
-            </tr>
+                </tr>
+           
+            
             
         )
     })
@@ -45,9 +49,9 @@ const LibraryList = (props) => {
     return ( 
         <div>
             {/* <h3>Library</h3> */}
-            <Table hover bordered>
+            <Table hover responsive style={{backgroundColor: 'white', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
       <thead>
-        <tr>
+        <tr >
           {/* <th>#</th> */}
           <th>Date</th>
           <th>Author</th>

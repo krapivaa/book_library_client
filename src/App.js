@@ -7,7 +7,10 @@ import LibraryHome from './booklibrary/LibraryHome'
 import Footer from './home/Footer';
 import {
   BrowserRouter as Router,
+  Switch, Route, Link
 } from 'react-router-dom';
+import SecondPage from './home/SecondPage';
+
 
 
 
@@ -39,7 +42,7 @@ function App() {
    
 
   return (
-    <>
+    <div>
 
       {/* <header className="App-header">
         
@@ -59,18 +62,37 @@ function App() {
           {protectedViews()}
         </div>
       // </header> */} 
-       <Router>
+         
         <div className="App">
-          <Navigation clickLogout={clearToken} token={sessionToken} />
-          {protectedViews()}
-          </div>
+          <Router>
+            <Navigation clickLogout={clearToken} token={sessionToken} />
+
+            <div>            
+                
+                  {/* <Link to='/secondpage' style={{float: "right", marginRight: '20px', padding: '5px', color: 'olive'}}><h3>Inspiration</h3></Link> */}
+                  {/* <Link to='/'>Library</Link> */}
+                       
+            </div>
+
+
+          <Switch>
+            <Route exact path="/">
+            {protectedViews()}
+            </Route>
+
+            <Route path="/secondpage">
+              <SecondPage />
+            </Route>
+          </Switch>
+         
         </Router>
+        </div>
         
         
         <Footer />
         
 
-      </>
+      </div>
   );
 }
 

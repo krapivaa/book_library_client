@@ -56,7 +56,7 @@ useEffect(() => {
 }, [])
 
     return ( 
-        <Container className="themed-container containerLibraryHome" fluid="lg" style={{color: 'salmon'}} >
+        <Container className="themed-container containerLibraryHome" fluid="lg" >
             
             <Nav tabs>
         <NavItem>
@@ -101,24 +101,14 @@ useEffect(() => {
                 </Col>
 
                 </Row>
-<Row>
-                <Col md='9'>
+
+                <Row>
+                <Col md='13'>
                     <LibraryList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchLibrary={fetchLibrary} token={props.token} />
 
                     </Col>
 
 
-                    {/* <Col md='3'>
-                <Button color="success" className="buttonMyBookLibrary" onClick={() => {
-                 setFetchUrl(`${APIURL}/api/booklist/mine`)}}>My Book Library</Button>
-
-                 <br/>
-                 <br/>
-
-                <Button color="success" className="buttonHaveRead" onClick={() => {
-                 setFetchUrl(`${APIURL}/api/booklist/haveRead`)}}>The books I have read</Button>
-
-                </Col> */}
                 </Row>
         </TabPane>
         <TabPane tabId="2">

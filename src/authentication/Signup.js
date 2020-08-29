@@ -28,8 +28,13 @@ const handleSubmit = (event) => {
 
     return (
         <div>
+       <div style={{padding: '10px', margin: '20px'}}> <h4>“Once you learn to read, you will be forever free.” 
+            <br />– Frederick Douglass</h4>
+        </div> 
 
-        <h3>Don't have an account? Please sign up below.</h3>
+        <h5 style={{padding: '10px', margin: '10px'}}>Don't have an account?
+            <br />
+             Please sign up below.</h5>
 
        <Button onClick={toggle} style={{backgroundColor: 'grey'}} >Sign up for an account</Button>
        <Modal isOpen={modal} toggle={toggle} className="signUp" external={externalCloseBtn}>

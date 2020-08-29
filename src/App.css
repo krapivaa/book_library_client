@@ -1,9 +1,21 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
  
-  background-image: url("../src/assets/bookCover.jpg");
-  height: 100vh;
+  background-image: url("../src/assets/book.jpg");
+  /* height: 100vh; */
   background-size: cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 95vh;
+  min-width: 100%;
+  margin: 0;
+  /* height: 100vh; */
 
 }
 
@@ -11,7 +23,7 @@
   /* background-color: lightsalmon; */
   /*  */
   background-image: url("https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg");
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +70,9 @@
   background-color: rgb(243, 240, 236);
 }
 
+.buttonHaveRead {
+  margin-bottom: 10px;
+}
 
 /* LibraryList.js */
 .buttonUpdate {
@@ -74,6 +89,10 @@
  
 }
 
+/* .containerLibraryHome {
+  width: fit-content;
+} */
+
 /* LibraryUpdate.js */
 .buttonCancelUpdate {
   float: right;
@@ -89,4 +108,34 @@
   padding-left: 50px ;
   margin: 0px;
   background-color: seashell;
+}
+
+
+/* SecondPage.js */
+.secondPage {
+  background-image: url("../src/assets/secondPage.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 95vh;
+  min-width: 100%;
+  margin: 0;
+  border: 2px solid black;;
+
+}
+
+div.transbox {
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox h3 {
+  margin: 5%;
+  font-weight: bold;
 }

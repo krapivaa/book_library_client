@@ -25,7 +25,7 @@ const Login = (props) => {
 
     return (
         <div>
-            <h3>Login</h3>
+            <h3 style={{padding: '10px', marginTop: '10px'}}>Login</h3>
             <Form onSubmit={handleSubmit} className="formLogin">
                 <FormGroup>
                     <Label htmlFor="email">Email</Label>
