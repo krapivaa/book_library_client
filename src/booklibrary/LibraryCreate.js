@@ -39,7 +39,7 @@ const LibraryCreate = (props) => {
 
     return ( 
        
-        <Fragment>
+    <Fragment>
         <h3>Update your Library</h3>
         <Form onSubmit={handleSubmit}>
 
@@ -89,8 +89,7 @@ const LibraryCreate = (props) => {
             <Button outline color="secondary" type="cancel" className="buttonCancelUpdate"onClick={ () => props.toggle('1')}>Cancel</Button>
             
         </Form>
-    
-        </Fragment>
+    </Fragment>
      );
 }
  

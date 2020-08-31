@@ -3,7 +3,8 @@ import { Button} from 'reactstrap';
 import '../App.css'
 import APIURL from '../helpers/environment';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import defaultphoto from '../assets/bookImage.jpg';
 
 const LibraryList = (props) => {
 
@@ -24,7 +25,7 @@ const LibraryList = (props) => {
         return(
          
             <Tr key={index}>
-                {/* <th scope="row">{book.id}</th> */}
+                <Th scope="row">{index + 1}</Th>
                 {/* {console.log(book.photo)} */}
                 <Td>{book.date}</Td>
                 <Td>{book.author}</Td>
@@ -32,17 +33,14 @@ const LibraryList = (props) => {
                 <Td>{book.notes}</Td>
                 <Td>{book.haveRead ? "Yes" : "No"}</Td>
                 <Td>{book.willRead ? "Yes" : "No"}</Td>
-                <Td><img src={book.photo} width="70" object-fit="cover" /></Td>
+                <Td><img src={book.photo ? book.photo : defaultphoto} width="70" className="imageBook" object-fit="cover" /></Td>
                 
                 <Td>
                   <Button outline color="success" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
 
                     <Button outline color="secondary " className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
                 </Td>
-                </Tr>
-           
-            
-            
+                </Tr>        
         )
     })
 }
@@ -54,7 +52,7 @@ const LibraryList = (props) => {
             <Table hover responsive style={{backgroundColor: 'white', opacity: '0.9', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
       <Thead>
         <Tr >
-          {/* <th>#</th> */}
+          <Th></Th>
           <Th>Date</Th>
           <Th>Author</Th>
           <Th>Title</Th>

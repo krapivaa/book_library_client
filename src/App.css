@@ -5,9 +5,7 @@ body, html {
 
 .App {
   text-align: center;
- 
   background-image: url("../src/assets/book.jpg");
-  /* height: 100vh; */
   background-size: cover;
   height: 100%;
   background-position: center;
@@ -15,34 +13,6 @@ body, html {
   min-height: 95vh;
   min-width: 100%;
   margin: 0;
-  /* height: 100vh; */
-
-}
-
-.App-header {
-  /* background-color: lightsalmon; */
-  /*  */
-  background-image: url("https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg");
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: green;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Navbar.js */
@@ -86,9 +56,13 @@ body, html {
  
 }
 
-/* .containerLibraryHome {
-  width: fit-content;
-} */
+.imageBook {
+  width: 70px; 
+  height: 90px; 
+  object-fit: cover;
+  overflow: hidden;
+}
+
 
 /* LibraryUpdate.js */
 .buttonCancelUpdate {
@@ -97,14 +71,6 @@ body, html {
 
 .buttonSubmitCreate {
   float: left;
-}
-
-/* Footer.js */
-.footer {
-  padding: 10px;
-  padding-left: 50px ;
-  margin: 0px;
-  background-color: seashell; 
 }
 
 
@@ -119,7 +85,6 @@ body, html {
   min-width: 100%;
   margin: 0;
   border: 2px solid black;;
-
 }
 
 div.transbox {
@@ -135,4 +100,13 @@ div.transbox {
 div.transbox h3 {
   margin: 5%;
   font-weight: bold;
+}
+
+
+/* Footer.js */
+.footer {
+  padding: 10px;
+  padding-left: 50px ;
+  margin: 0px;
+  background-color: seashell; 
 }

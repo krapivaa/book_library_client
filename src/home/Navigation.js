@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, Button} from 'reactstrap';
 import '../App.css';
+import logo from '../assets/bookWorm.gif';
 
 
-import {
-    BrowserRouter as Router,
-    Switch, Route, Link
-  } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 const Navigation = (props) => {
@@ -20,9 +18,13 @@ const [isOpen, setIsOpen] = useState(false);
     
         return (
             <Navbar light expand="md" className="navbar" >
+
+                <img src={logo} alt="loading..." height="50px" style={{margin: '10px', padding: '5px'}} />
+
                 <NavbarBrand href="/" className="mr-auto navbarBrand" style={{color: 'dark-green'}}><h2>My library</h2></NavbarBrand>
 
                 <Link to='/secondpage' style={{float: "right", marginRight: '20px', padding: '10px', color: 'black'}}><h6>About</h6></Link>
+
 
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>

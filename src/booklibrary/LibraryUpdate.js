@@ -32,8 +32,8 @@ const toggle = () => setModal(!modal);
 
 
     return ( 
-        <div>
-            <Modal isOpen={true}>
+    <div>
+        <Modal isOpen={true}>
 
             <ModalHeader>Update</ModalHeader>
             <ModalBody>
@@ -84,9 +84,7 @@ const toggle = () => setModal(!modal);
                     <Button outline color="secondary" className="buttonCancelUpdate">Cancel</Button>
                 </Form>
             </ModalBody>
-
-           
-
+        
         </Modal>
         </div>
      );

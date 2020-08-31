@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-// import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import Navigation from './home/Navigation';
 import Start from './authentication/Start';
@@ -10,8 +9,6 @@ import {
   Switch, Route, Link
 } from 'react-router-dom';
 import SecondPage from './home/SecondPage';
-
-
 
 
 
@@ -42,57 +39,24 @@ function App() {
    
 
   return (
-    <div>
-
-      {/* <header className="App-header">
-        
-        <p>
-         Hello Book Lover!
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://www.yourbosomfriend.com/wp-content/uploads/2020/03/Books-768x576.jpg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read!
-        </a> */}
-        {/* <div>
-          <Navigation clickLogout={clearToken} />
-          {protectedViews()}
-        </div>
-      // </header> */} 
-         
-        <div className="App">
+    <div>       
+      <div className="App">
           <Router>
             <Navigation clickLogout={clearToken} token={sessionToken} />
+              <Switch>
+                <Route exact path="/">
+                  {protectedViews()}
+                 </Route>
 
-            <div>            
-                
-                  {/* <Link to='/secondpage' style={{float: "right", marginRight: '20px', padding: '5px', color: 'olive'}}><h3>Inspiration</h3></Link> */}
-                  {/* <Link to='/'>Library</Link> */}
-                       
-            </div>
-
-
-          <Switch>
-            <Route exact path="/">
-            {protectedViews()}
-            </Route>
-
-            <Route path="/secondpage">
-              <SecondPage />
-            </Route>
-          </Switch>
-         
-        </Router>
-        </div>
-        
-        
+                <Route path="/secondpage">
+                  <SecondPage />
+                </Route>
+              </Switch> 
+          </Router>
+        </div>      
+       
         <Footer />
-        
-
-      </div>
+    </div>
   );
 }
 
